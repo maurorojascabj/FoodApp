@@ -12,7 +12,9 @@ const MealItem = props => {
                     source={{uri: props.image}}
                     style={styles.bgImage}
                   >
-                    <Text style={styles.title} numberOfLines={1}>{props.title}</Text>
+                    <View style={styles.titleContainer}>
+                      <Text style={styles.title} numberOfLines={1}>{props.title}</Text>
+                    </View>
                   </ImageBackground>
                 </View>
               	<View style={{...styles.mealRow, ...styles.mealDetail}}>
@@ -47,13 +49,15 @@ const styles = StyleSheet.create({
       height:'100%',
       justifyContent:'flex-end'
     },
+    titleContainer:{
+      backgroundColor: 'rgba(0,0,0,0.5)',
+      paddingVertical: 5,
+      paddingHorizontal: 12,
+    },
     title:{
       fontSize:20,
       textAlign: 'center',
       color: 'white',
-      backgroundColor: 'rgba(0,0,0,0.5)',
-      paddingVertical: 5,
-      paddingHorizontal: 12,
     },  
 });
 
