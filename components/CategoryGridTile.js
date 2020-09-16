@@ -2,7 +2,7 @@ import React from 'react';
 import {View, Text, TouchableOpacity, StyleSheet, ImageBackground} from 'react-native';
 
 const CategoryGridTile = props => {
-	const image = {uri: props.image}
+	const image = {uri: props.image};
 	return(
 		<TouchableOpacity
 			style={{...styles.gridItem}}
